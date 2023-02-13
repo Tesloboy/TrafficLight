@@ -41,14 +41,14 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qRI-qU-CCn">
-                                <rect key="frame" x="111" y="636" width="168" height="50"/>
+                                <rect key="frame" x="111" y="636" width="168" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Start">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="makeButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="gH4-92-Btw"/>
+                                    <action selector="makeButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="A7B-ij-deq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,7 +62,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="startButton" destination="qRI-qU-CCn" id="hfb-7q-bx6"/>
+                        <outlet property="allColors" destination="hky-WK-X0D" id="kzn-iI-l6W"/>
+                        <outlet property="greenLight" destination="RXJ-mv-lK8" id="K9e-Ft-2uS"/>
+                        <outlet property="redLight" destination="6q7-KP-8dg" id="bH4-NR-CCM"/>
+                        <outlet property="toggleButton" destination="qRI-qU-CCn" id="ID5-Jy-JmC"/>
+                        <outlet property="yellowLight" destination="RRU-Sf-ZeO" id="K5v-tW-seA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
