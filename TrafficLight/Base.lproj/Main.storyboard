@@ -16,23 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="q4d-Mc-JOL">
-                                <rect key="frame" x="136" y="134" width="121" height="121"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.91976243260000001" green="0.033764450719999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="USb-vB-MEN">
-                                <rect key="frame" x="136" y="298" width="121" height="121"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="cHw-kj-s1q">
-                                <rect key="frame" x="136" y="471" width="121" height="121"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.2092739824" green="0.91976243260000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="hky-WK-X0D">
+                                <rect key="frame" x="144.33333333333334" y="77" width="101.33333333333334" height="384"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6q7-KP-8dg">
+                                        <rect key="frame" x="0.0" y="0.0" width="101.33333333333333" height="101.33333333333333"/>
+                                        <color key="backgroundColor" red="0.91976243260000001" green="0.033764450719999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6q7-KP-8dg" secondAttribute="height" multiplier="1:1" id="30Z-tH-F63"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RRU-Sf-ZeO">
+                                        <rect key="frame" x="0.0" y="141.33333333333334" width="101.33333333333333" height="101.33333333333334"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RXJ-mv-lK8">
+                                        <rect key="frame" x="0.0" y="282.66666666666669" width="101.33333333333333" height="101.33333333333331"/>
+                                        <color key="backgroundColor" red="0.2092739824" green="0.91976243260000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RXJ-mv-lK8" firstAttribute="width" secondItem="RXJ-mv-lK8" secondAttribute="height" multiplier="1:1" id="08b-xi-6TN"/>
+                                    <constraint firstItem="RRU-Sf-ZeO" firstAttribute="width" secondItem="RRU-Sf-ZeO" secondAttribute="height" multiplier="1:1" id="cjQ-6P-10I"/>
+                                </constraints>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qRI-qU-CCn">
-                                <rect key="frame" x="111" y="719" width="168" height="50"/>
+                                <rect key="frame" x="111" y="636" width="168" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Start">
@@ -45,12 +54,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qRI-qU-CCn" firstAttribute="top" secondItem="hky-WK-X0D" secondAttribute="bottom" constant="175" id="Azu-xI-t2x"/>
+                            <constraint firstItem="hky-WK-X0D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FKq-7Q-eIg"/>
+                            <constraint firstItem="hky-WK-X0D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="bmG-ZM-T8V"/>
+                            <constraint firstItem="hky-WK-X0D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qzu-Eq-V7r"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenLight" destination="cHw-kj-s1q" id="jmg-km-aZh"/>
-                        <outlet property="redLight" destination="q4d-Mc-JOL" id="fIA-C9-3gt"/>
                         <outlet property="startButton" destination="qRI-qU-CCn" id="hfb-7q-bx6"/>
-                        <outlet property="yellowLight" destination="USb-vB-MEN" id="wSO-eq-QFY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
